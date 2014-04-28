@@ -10,15 +10,16 @@ import org.json.JSONException;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
+import android.text.util.Linkify;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
-import cntg.imusm.commonutils.CommonUtils;
 import cntg.imusm.commonutils.debug.MyDebugLog;
 import cntg.imusm.commonutils.notifycation.ToastUtil;
 import cntg.imusm.commonutils.view.GraphicsUtils;
 import cntg.imusm.gchat.R;
+import cntg.imusm.gchat.adapter.CustomInfoWindowAdapter;
 import cntg.imusm.gchat.model.FriendModel;
 import cntg.imusm.gchat.model.MyItem;
 import cntg.imusm.gchat.model.MyItemReader;
@@ -31,10 +32,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
-import com.google.android.gms.maps.model.LatLngBoundsCreator;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.maps.android.MarkerManager.Collection;
 import com.google.maps.android.clustering.Cluster;
 import com.google.maps.android.clustering.ClusterManager;
 import com.google.maps.android.clustering.view.DefaultClusterRenderer;
@@ -85,6 +84,7 @@ public class FragmentMap extends SupportMapFragment implements
 		if (bitmap != null) {
 			mO.icon(BitmapDescriptorFactory.fromBitmap(bitmap));
 		}
+		mO.snippet("4:pm");
 		mO.anchor(0.5f, 0.5f);
 		return map.addMarker(mO);
 	}
@@ -95,6 +95,7 @@ public class FragmentMap extends SupportMapFragment implements
 		}
 		mMap = getMap();
 		if (mMap != null) {
+			mMap.setInfoWindowAdapter(new CustomInfoWindowAdapter(getActivity()));
 			mMap.getUiSettings().setZoomControlsEnabled(false);
 			mMap.getUiSettings().setCompassEnabled(true);
 			// start INIT data
