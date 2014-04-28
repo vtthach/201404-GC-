@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <View
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_status"
+        android:layout_alignTop="@+id/tv_name"
+        android:background="@drawable/background_color" />
+
+    <ImageView
+        android:id="@+id/img_emotion"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/animation_emotin"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_toRightOf="@+id/img_emotion"
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:ellipsize="middle"
+        android:gravity="left"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:singleLine="true"
+        android:text="Ere rer erer ere re rer er Ere rer erer ere re rer er Ere rer erer ere re rer er "
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/blue" />
+
+    <TextView
+        android:layout_alignLeft="@+id/tv_name"
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingBottom="10dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="10dp"
+        android:text="status"
+        android:textAppearance="?android:attr/textAppearanceSmallInverse"
+        android:textColor="@android:color/darker_gray" />
+
+</RelativeLayout>

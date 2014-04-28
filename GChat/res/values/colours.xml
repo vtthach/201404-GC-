@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="header">#ff33b5e5</color>
+    <color name="login_btn_color">#39b9e7</color>
+    <color name="login_btn_selected_color">#a6d8ea</color>
+    <color name="login_bg_color">#dbdbdb</color>
+    <color name="setting_bg_color">#dbdbdb</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="blue">#ff33b5e5</color>
+    <color name="light_gray">#f2f2f2</color>
+    <color name="background_bottom_bar">#323232</color>
+    <color name="actionbar_text">@android:color/white</color>
+    <color name="actionbar_focus">#000000</color>
+    <color name="light_green">#DCF0C6</color>
+    <color name="light_blue">#E1F7FF</color>
+    <color name="light_yellow">#FFFFC6</color>
+	<color name="light_salmon">#E6E6FA</color>
+    <!-- event background closed -->
+    <color name="event_background_closed">@color/light_gray</color>
+    <!-- event background open -->
+    <color name="event_background_open">@android:color/white</color>
+    <!-- event row focus -->
+    <color name="event_row_focus">@color/blue</color>
+    <!-- event grid background -->
+    <!-- <color name="event_grid_background">#A4A4A4</color> -->
+    <color name="event_grid_background">#afafaf</color>
+
+    <!-- event time header -->
+    <color name="event_time_header">@android:color/black</color>
+
+    <!-- Add text note -->
+    <color name="note_content_bg">#fcf9a8</color>
+    <color name="tv_title_color">#39b9e7</color>
+    <!--  -->
+    <color name="map_line_color">#33b5e5</color>
+    
+</resources>
