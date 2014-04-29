@@ -10,7 +10,6 @@ import org.json.JSONException;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
-import android.text.util.Linkify;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -124,8 +123,6 @@ public class FragmentMap extends SupportMapFragment implements
 		addItems();
 		mClusterManagerPerson.cluster();
 
-		// Test
-		LatLngBounds.Builder builder = new LatLngBounds.Builder();
 		getMap().moveCamera(
 				CameraUpdateFactory.newLatLngZoom(new LatLng(10.85642465,
 						106.6307473), 13f));
